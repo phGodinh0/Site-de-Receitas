@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Lato', sans-serif;
+}
+ 
+.navbar {
+  background: #ffffff;
+  border-bottom: 3px solid #C0392B;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+ 
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+ 
+.nav-logo-icon {
+  width: 38px;
+  height: 38px;
+  background: #C0392B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+ 
+.nav-logo-texto {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #3B1A0A;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+ 
+.nav-logo-texto span {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+  color: #8B6347;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+ 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+}
+ 
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3B1A0A;
+  padding: 8px 18px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  position: relative;
+  transition: background 0.18s, color 0.18s;
+}
+ 
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 18px;
+  right: 18px;
+  height: 2px;
+  background: #C0392B;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+ 
+.nav-links a:hover {
+  color: #C0392B;
+  background: #FDF3F2;
+}
+ 
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.hero {
+  text-align: center;
+  padding: 72px 2rem 48px;
+}
+ 
+.hero-sub {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #C0392B;
+  margin-bottom: 16px;
+}
+ 
+.hero-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  color: #3B1A0A;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+ 
+.hero-titulo em {
+  font-style: italic;
+  color: #C0392B;
+}
+ 
+.hero-subtitulo {
+  font-size: 16px;
+  color: #7A5C48;
+  line-height: 1.7;
+}
+ 
+.cards-sessao {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  padding: 0 2rem 80px;
+  flex-wrap: wrap;
+}
+ 
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  background: #ffffff;
+  border: 1.5px solid #E8D8CC;
+  border-radius: 16px;
+  padding: 40px 32px 32px;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+ 
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(192, 57, 43, 0.12);
+  border-color: #C0392B;
+}
+ 
+.card-icon {
+  margin-bottom: 20px;
+}
+ 
+.card-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #3B1A0A;
+  margin-bottom: 10px;
+}
+ 
+.card-desc {
+  font-size: 14px;
+  color: #7A5C48;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+ 
+.card-link {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #C0392B;
+  border-bottom: 1.5px solid #C0392B;
+  padding-bottom: 2px;
+  transition: opacity 0.18s;
+}
+ 
+.card:hover .card-link {
+  opacity: 0.75;
+}
+ 
+.footer {
+  background: #2E1108;
+  border-top: 3px solid #C0392B;
+  padding: 36px 2rem;
+}
+ 
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+ 
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+ 
+.footer-logo-icon {
+  width: 32px;
+  height: 32px;
+  background: #C0392B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+ 
+.footer-brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #F5EDE6;
+  letter-spacing: 0.01em;
+}
+ 
+.footer-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+ 
+.footer-links a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #C4A48E;
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition: color 0.18s, background 0.18s;
+}
+ 
+.footer-links a:hover {
+  color: #ffffff;
+  background: rgba(192, 57, 43, 0.25);
+}
+ 
+.footer-copy {
+  font-size: 12px;
+  color: #7A5444;
+  letter-spacing: 0.03em;
+}
+
+.recipes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  gap: 24px;
+  justify-content: center;
+  padding: 40px 2rem 80px;
+}
+
+.recipe-card {
+  position: relative;
+  width: 320px;
+  height: 220px;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(192, 57, 43, 0.25);
+}
+
+.recipe-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.recipe-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.2)
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
+}
+
+.recipe-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: white;
+  margin-bottom: 14px;
+}
+
+.recipe-button {
+  align-self: flex-start;
+
+  text-decoration: none;
+  background: #C0392B;
+  color: white;
+
+  padding: 10px 18px;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  transition: background 0.2s ease;
+}
+
+.recipe-button:hover {
+  background: #a93226;
+}
+
+.container {
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  margin: 10px 0 0 30px ;
+}
+
+.titulo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #3B1A0A;
+}
+
+.passos {
+  color: #7A5C48;
+  line-height: 1.7;
+  font-family: 'Lato', sans-serif;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 6rem;
+  }
+
+  .recipe-card {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-logo-texto {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 6px;
+  }
+
+  .nav-links a {
+    padding: 10px 14px;
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    padding: 4rem 1.2rem;
+  }
+
+  .hero-sub {
+    font-size: 0.72rem;
+  }
+
+  .card {
+    border-radius: 22px;
+    padding: 2rem 1.5rem;
+  }
+
+  .recipe-card {
+    min-height: 260px;
+    border-radius: 22px;
+  }
+
+  .recipe-title {
+    font-size: 1.6rem;
+  }
+
+  .footer {
+    padding: 3rem 1rem;
+  }
+}
